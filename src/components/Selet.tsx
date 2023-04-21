@@ -311,7 +311,7 @@ export function Total() {
   );
 }
 
-export function Botones() {
+export function Botones(props:any) {
   interface Mdt {
     ps1: number;
     D1: number;
@@ -362,7 +362,10 @@ export function Botones() {
       >
         Sumar
       </button>
-      <button type="button" className="btn btn-warning m-2">
+      <button
+      onClick={props.onclick}
+       type="button" 
+       className="btn btn-warning m-2">
         Imprimir
       </button>
     </div>
